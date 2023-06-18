@@ -3,6 +3,7 @@
 site_name: nameko-plus
 theme:
   name: material
+  language: zh
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
