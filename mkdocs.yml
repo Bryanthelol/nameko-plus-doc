@@ -4,6 +4,15 @@ site_name: nameko-plus
 theme:
   name: material
   palette:
-    scheme: default
-    primary: deep orange
-    accent: indigo
+    - scheme: default
+      primary: deep orange
+      accent: indigo
+      toggle:
+        icon: material/lightbulb
+        name: 切至暗黑模式
+    - scheme: slate
+      primary: grey
+      accent: blue
+      toggle:
+        icon: material/lightbulb-outline
+        name: 切至光亮模式
