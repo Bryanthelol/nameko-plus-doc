@@ -41,5 +41,3 @@ extra:
       link: https://github.com/Bryanthelol
     - icon: material/twitter
       link: https://twitter.com/beijisenlin
-plugins:
-  - git-authors
