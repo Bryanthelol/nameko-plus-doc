@@ -33,3 +33,5 @@ extra:
     - name: English
       link: https://apiflask.com/
       lang: en
+plugins:
+  - git-authors
