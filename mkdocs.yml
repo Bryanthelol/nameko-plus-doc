@@ -19,3 +19,11 @@ theme:
       toggle:
         icon: material/lightbulb-outline
         name: 切至光亮模式
+extra:
+  alternate:
+    - name: 简体中文
+      link: https://doc.bearcatlog.com/
+      lang: zh
+    - name: English
+      link: https://apiflask.com/
+      lang: en
