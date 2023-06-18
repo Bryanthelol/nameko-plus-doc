@@ -5,9 +5,12 @@ theme:
   name: material
   palette:
     - media: "(prefers-color-scheme)"
+      scheme: default
+      primary: deep orange
+      accent: indigo
       toggle:
         icon: material/brightness-auto
-        name: Switch to light mode
+        name: 切至光亮模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: deep orange
@@ -21,4 +24,4 @@ theme:
       accent: blue
       toggle:
         icon: material/lightbulb-outline
-        name: 切至光亮模式
+        name: 切至自动模式
