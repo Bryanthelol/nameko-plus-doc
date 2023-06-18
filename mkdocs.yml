@@ -2,7 +2,7 @@
 
 site_name: nameko-plus
 repo_url: https://gitea.bearcatlog.com/BryantStudio
-repo_name: BryantStudio/nameko-plus
+repo_name: BryantStudio
 theme:
   name: material
   language: zh
