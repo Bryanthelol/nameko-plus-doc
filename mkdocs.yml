@@ -2,5 +2,8 @@
 
 site_name: nameko-plus
 theme:
-  # name: material
-  name: readthedocs
+  name: material
+  palette:
+    scheme: default
+    primary: deep orange
+    accent: indigo
