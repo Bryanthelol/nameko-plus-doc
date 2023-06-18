@@ -2,4 +2,5 @@
 
 site_name: nameko-plus
 theme:
-  name: material
+  # name: material
+  name: readthedocs
