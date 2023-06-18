@@ -1,4 +1,8 @@
 ---
+#search:
+#  boost: 2 
+#search:
+#  exclude: true
 hide:
   - footer
 ---

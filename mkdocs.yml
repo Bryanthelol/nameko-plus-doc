@@ -13,6 +13,8 @@ theme:
     repo: simple/gitea
   features:
     - navigation.footer
+    - search.suggest
+    - search.highlight
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -41,3 +43,6 @@ extra:
       link: https://github.com/Bryanthelol
     - icon: material/twitter
       link: https://twitter.com/beijisenlin
+plugins:
+  - search
+  - git-authors
