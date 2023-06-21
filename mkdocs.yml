@@ -1,6 +1,11 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
 site_name: Nameko-plus
+nav:
+- index.md
+- 快速开始.md
+- 架构说明.md
+- 依赖项.md
 repo_url: https://gitea.bearcatlog.com/BryantStudio
 repo_name: BryantStudio
 copyright: Copyright &copy; 2023 Bryant He
