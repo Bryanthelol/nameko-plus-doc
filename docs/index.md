@@ -10,7 +10,7 @@ hide:
 # 首页
 
 
-文档的目的是说明如何基于 Nameko 开发 Python 微服务应用
+文档的目的是说明如何基于 Python Nameko 开发微服务应用
 
 
 ## 文档结构
