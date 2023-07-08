@@ -12,6 +12,7 @@ hide:
 - git clone 项目到本地
 - git checkout develop
 
+主流程
 
 1. 从 develop 创建一个分支来完成新功能的开发 
   1. git checkout -b feature/feature-a

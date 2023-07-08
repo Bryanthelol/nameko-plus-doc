@@ -12,6 +12,7 @@ hide:
 
 - feature/feature-a 分支的功能在 test 环境通过验收后
 
+主流程
 
 1. 相关人员发起 Pull Request 到 develop 分支
 2. 由相关人员进行 Code Review 
