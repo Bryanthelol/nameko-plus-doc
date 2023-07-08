@@ -11,17 +11,18 @@ hide:
 - git clone 项目到本地
 - git checkout develop
 
-1. 从 develop 创建一个分支来完成新功能的开发, git checkout -b feature/feature-a
+1. 从 develop 创建一个分支来完成新功能的开发 
+  1. git checkout -b feature/feature-a
 2. 代码添加修改后
-   1. git add . 
-   2. git commit -m "feature: hello world feature A"
+  1. git add . 
+  2. git commit -m "feature: hello world feature A"
 3. 将代码推送到代码库的对应分支
-   1. git push origin feature/feature-a
+  1. git push origin feature/feature-a
 4. feature/feature-a 分支 push 到远程仓库后
-   - 此时 CI 收到 feature/feature-a 分支的 push 事件
-     1. 跑单元测试（如果有的话）
-     2. 部署到 test 服务器（功能测试）
-     3. 跑代码分析（如果有的话）
+  - 此时 CI 收到 feature/feature-a 分支的 push 事件
+    1. 跑单元测试（如果有的话）
+    2. 部署到 test 服务器（功能测试）
+    3. 跑代码分析（如果有的话）
 
 
 ## drone yaml 配置示例
