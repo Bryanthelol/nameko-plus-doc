@@ -15,10 +15,14 @@ hide:
 主流程
 
 1. 从 develop 创建一个分支来完成新功能的开发 
+   
       1. git checkout -b feature/feature-a
+
 2. 代码添加修改后
+   
       1. git add . 
       2. git commit -m "feature: hello world feature A"
+   
 3. 将代码推送到代码库的对应分支
       1. git push origin feature/feature-a
 4. feature/feature-a 分支 push 到远程仓库后
