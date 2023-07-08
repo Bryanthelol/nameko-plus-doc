@@ -7,8 +7,8 @@ nav:
 - 架构说明.md
 - 持续集成和部署:
   - CICD概述.md
-  - sit 环境方案.md
   - test 环境方案.md
+  - sit 环境方案.md
   - staging 环境方案.md
   - prod 环境方案.md
 - 依赖项.md
