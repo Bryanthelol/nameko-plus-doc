@@ -1,7 +1,7 @@
----
-# hide:
-#   - footer
----
+<!-- ---
+hide:
+  - footer
+--- -->
 
 # prod 环境方案
 

@@ -1,7 +1,7 @@
----
-# hide:
-#   - footer
----
+<!-- ---
+hide:
+  - footer
+--- -->
 
 # test 环境方案
 
