@@ -8,7 +8,9 @@ hide:
 ## 流程
 
 前置条件
+
 - develop 分支的功能在 sit 环境通过验收后
+
 
 1. 相关人员发起 Pull Request 到 main 分支
    - 此时 CI 收到 main 分支的 pull_request 事件
