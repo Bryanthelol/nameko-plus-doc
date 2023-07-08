@@ -18,7 +18,7 @@ hide:
 2. 由相关人员进行 Code Review 
 3. Code Review 通过后，相关人员合并当前 Pull Request
 
-      - 此时 CI 收到 develop 分支的 pull_request 事件
+      - 此时 CI 收到 develop 分支的 push 事件（由 merge pull_request 产生）
 
           - 跑单元测试（如果有的话）
           - 部署到 sit 服务器（集成测试）
@@ -81,12 +81,7 @@ steps:
   when:
     event:
       include:
-        - pull_request
-    action:
-      include:
-        - opened
-        - reopened
-        - synchronized
+        - push
 - name: clone
   image: alpine/git
   commands:
@@ -95,12 +90,7 @@ steps:
   when:
     event:
       include:
-        - pull_request
-    action:
-      include:
-        - opened
-        - reopened
-        - synchronized
+        - push
 - name: code-analysis
   image: aosapps/drone-sonar-plugin
   volumes:
@@ -117,12 +107,7 @@ steps:
   when:
     event:
       include:
-        - pull_request
-    action:
-      include:
-        - opened
-        - reopened
-        - synchronized
+        - push
 
 volumes:
 - name: sonarqube_cache
