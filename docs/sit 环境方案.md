@@ -36,7 +36,6 @@ hide:
 - develop_host
 - develop_ssh_key
 - gitea_token
-- gitea_base_url
 - sonar_host
 - sonar_token
 
@@ -80,44 +79,6 @@ steps:
       - docker-compose up -d --build --force-recreate
       - docker image prune -f
   when:
-    event:
-      include:
-        - pull_request
-    action:
-      include:
-        - opened
-        - reopened
-        - synchronized
-- name: gitea-pr-comment-failure
-  image: tsakidev/giteacomment:1.1.1
-  settings:
-    gitea_token:
-      from_secret: gitea_token
-    gitea_base_url: 
-      from_secret: gitea_base_url
-    comment: "${DRONE_PULL_REQUEST_TITLE} 部署 sit 环境失败"
-  when:
-    status: 
-      - failure
-    event:
-      include:
-        - pull_request
-    action:
-      include:
-        - opened
-        - reopened
-        - synchronized
-- name: gitea-pr-comment-success
-  image: tsakidev/giteacomment:1.1.1
-  settings:
-    gitea_token:
-      from_secret: gitea_token
-    gitea_base_url:  
-      from_secret: gitea_base_url
-    comment: "${DRONE_PULL_REQUEST_TITLE} 部署 sit 环境成功"
-  when:
-    status: 
-      - success
     event:
       include:
         - pull_request
