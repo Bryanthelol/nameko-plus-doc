@@ -24,3 +24,25 @@ hide:
 
 目前采用 gitflow 工作流
 
+## 备忘
+
+pull request 事件的 action 包含如下：
+
+- assigned
+- unassigned
+- labeled
+- unlabeled
+- opened
+- edited
+- closed
+- reopened
+- synchronize
+- converted_to_draft
+- ready_for_review
+- locked
+- unlocked
+- review_requested
+- review_request_removed
+- auto_merge_enabled
+- auto_merge_disabled
+

@@ -26,6 +26,13 @@ hide:
 
 ## drone yaml 配置示例
 
+需要准备的 secret：
+
+- test_host
+- test_ssh_key
+- sonar_host
+- sonar_token
+
 ```yaml
 
 ---

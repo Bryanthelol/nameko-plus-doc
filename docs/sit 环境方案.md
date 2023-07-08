@@ -11,7 +11,7 @@ hide:
 前置条件
 - feature/feature-a 分支的功能在 test 环境通过验收后
 
-1. 发起 Pull Request 到 develop 分支
+1. 相关人员发起 Pull Request 到 develop 分支
 2. 由相关人员进行 Code Review 
 3. Code Review 通过后，相关人员合并当前 Pull Request
    - 此时 CI 收到 develop 分支的 pull_request 事件
@@ -25,6 +25,14 @@ hide:
 - 合代码通过 Pull Request
 
 ## drone yaml 配置示例
+
+需要准备的 secret：
+
+- develop_host
+- develop_ssh_key
+- gitea_token
+- sonar_host
+- sonar_token
 
 ```yaml
 
@@ -68,7 +76,49 @@ steps:
     event:
       include:
         - pull_request
-        - custom
+    action:
+      include:
+        - opened
+        - reopened
+        - synchronized
+- name: gitea-pr-comment-failure
+  image: tsakidev/giteacomment:latest
+  settings:
+    gitea_token:
+      from_secret: gitea_token
+    gitea_base_url: http://gitea.example.com
+    comment_title: "部署 sit 环境失败"
+    comment: "${DRONE_PULL_REQUEST_TITLE} 部署 sit 环境失败"
+  when:
+    status: 
+      - failure
+    event:
+      include:
+        - pull_request
+    action:
+      include:
+        - opened
+        - reopened
+        - synchronized
+- name: gitea-pr-comment-success
+  image: tsakidev/giteacomment:latest
+  settings:
+    gitea_token:
+      from_secret: gitea_token
+    gitea_base_url: http://gitea.example.com
+    comment_title: "部署 sit 环境成功"
+    comment: "${DRONE_PULL_REQUEST_TITLE} 部署 sit 环境成功"
+  when:
+    status: 
+      - success
+    event:
+      include:
+        - pull_request
+    action:
+      include:
+        - opened
+        - reopened
+        - synchronized
 - name: clone
   image: alpine/git
   commands:
@@ -78,7 +128,11 @@ steps:
     event:
       include:
         - pull_request
-        - custom
+    action:
+      include:
+        - opened
+        - reopened
+        - synchronized
 - name: code-analysis
   image: aosapps/drone-sonar-plugin
   volumes:
@@ -96,7 +150,11 @@ steps:
     event:
       include:
         - pull_request
-        - custom
+    action:
+      include:
+        - opened
+        - reopened
+        - synchronized
 
 volumes:
 - name: sonarqube_cache
