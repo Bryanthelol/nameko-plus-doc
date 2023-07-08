@@ -66,6 +66,7 @@ steps:
     script:
       - cd /xxx/xxx/xxx
       - git fetch
+      - git checkout ${DRONE_BRANCH}
       - git reset --hard ${DRONE_COMMIT}
       - docker-compose down
       - docker-compose up -d --build --force-recreate

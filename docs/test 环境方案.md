@@ -10,11 +10,11 @@ hide:
 前置条件
 
 - git clone 项目到本地
-- git checkout develop
+- git checkout main
 
 主流程
 
-1. 从 develop 创建一个分支来完成新功能的开发 
+1. 从 main 创建一个分支来完成新功能的开发 
    
       1. git checkout -b feature/feature-a
 
@@ -79,6 +79,7 @@ steps:
     script:
       - cd /xxx/xxx/xxx
       - git fetch
+      - git checkout ${DRONE_BRANCH}
       - git reset --hard ${DRONE_COMMIT}
       - docker-compose down
       - docker-compose up -d --build --force-recreate

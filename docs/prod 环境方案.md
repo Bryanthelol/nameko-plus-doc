@@ -16,8 +16,15 @@ hide:
 1. 功能验证通过，相关人员合并 Pull Request
 
       - 此时 CI 收到 main 分支的 pull_request 的 close 事件
-          - CI 将为本次发布的代码及镜像自动打上版本号并书写 ChangeLog
+
+          - CI 将做语义化发布，对 main 分支最新 commit 自动打上版本号并书写 ChangeLog
+          - 这个 releas 会推送到远程仓库
+    
+      - 此时 CI 收到 main 分支的 tag 事件
+        
+          - 构建镜像并推送到镜像仓库
           - 部署到 prod 服务器（生产环境）
+            - 通知 k8s 更新镜像
 
 备注：
 
@@ -38,7 +45,7 @@ hide:
 
 kind: pipeline
 type: docker
-name: main-pull-request-prod
+name: main-merge-pull-request-prod
 
 platform:
   os: linux
@@ -48,60 +55,66 @@ trigger:
   branch:
     include:
       - main
+  event:
+    include:  
+      - push
 
 clone:
   disable: true
 
 steps:
-- name: deploy
-  image: appleboy/drone-ssh
-  settings:
-    host:
-      from_secret: staging_host
-    username: root
-    key:
-      from_secret: staging_ssh_key
-    port: 22
-    script_stop: true
-    script:
-      - TODO
-  when:
-    event:
-      - pull_request
-    action:
-      - closed
-- name: gitea-pr-comment-failure
-  image: tsakidev/giteacomment:latest
-  settings:
-    gitea_token:
-      from_secret: gitea_token
-    gitea_base_url: http://gitea.example.com
-    comment_title: "部署正式环境失败"
-    comment: "${DRONE_PULL_REQUEST_TITLE} 部署正式环境失败"
-  when:
-    status: 
-      - failure
-    event:
-      include:
-        - pull_request
-    action:
-      - closed
-- name: gitea-pr-comment-success
-  image: tsakidev/giteacomment:latest
-  settings:
-    gitea_token:
-      from_secret: gitea_token
-    gitea_base_url: http://gitea.example.com
-    comment_title: "部署正式环境成功"
-    comment: "${DRONE_PULL_REQUEST_TITLE} 部署正式环境成功"
-  when:
-    status: 
-      - success
-    event:
-      include:
-        - pull_request
-    action:
-      - closed
+  - name: semantic-release  
+    image: gtramontina/semantic-release:15.13.3  
+    environment:  
+      GITHUB_TOKEN:  
+        from_secret: gitea_token  
+    entrypoint:  
+      - semantic-release
+    
+---
 
+kind: pipeline
+type: docker
+name: main-tag-prod
+
+platform:
+  os: linux
+  arch: amd64
+
+trigger:
+  branch:
+    include:
+      - main
+  event:
+    include:
+      - tag
+
+clone:
+  disable: true
+
+steps:
+- name: clone-repo
+  image: alpine/git
+  commands:
+    - git clone ${DRONE_GIT_HTTP_URL} .
+    - git checkout ${DRONE_BRANCH}
+- name: build-and-push-image
+  image: plugins/docker
+  settings:
+    registry:
+      from_secret: docker_registry
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: gitea.bearcatlog.com/bryant/admin-service
+    context: .
+    dockerfile: ./Dockerfile
+    tags:
+    - ${DRONE_TAG}
+    # auto_tag: true
+    purge: true
+    compress: true
+# TODO 通知 k8s 更新镜像
 ```
 
