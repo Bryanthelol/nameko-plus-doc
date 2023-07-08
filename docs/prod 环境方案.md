@@ -64,7 +64,7 @@ clone:
 
 steps:
   - name: semantic-release  
-    image: gtramontina/semantic-release:15.13.3  
+    image: gtramontina/semantic-release:17.4.3
     environment:  
       GITHUB_TOKEN:  
         from_secret: gitea_token  
