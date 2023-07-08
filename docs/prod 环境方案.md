@@ -15,7 +15,7 @@ hide:
 
 1. 功能验证通过，相关人员合并 Pull Request
 
-      - 此时 CI 收到 main 分支的 pull_request 的 close 事件
+      - 此时 CI 收到 main 分支的 push  事件（由 merge pull_request 产生）
 
           - CI 将做语义化发布，对 main 分支最新 commit 自动打上版本号并书写 ChangeLog
           - 这个 releas 会推送到远程仓库
