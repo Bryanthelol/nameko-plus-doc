@@ -14,6 +14,7 @@ hide:
 主流程
 
 1. 相关人员发起 Pull Request 到 main 分支
+
       - 此时 CI 收到 main 分支的 pull_request 事件
           - 跑单元测试（如果有的话）
           - 部署到 staging 服务器（预发布环境）

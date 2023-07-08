@@ -14,6 +14,7 @@ hide:
 主流程
 
 1. 功能验证通过，相关人员合并 Pull Request
+
       - 此时 CI 收到 main 分支的 pull_request 的 close 事件
           - CI 将为本次发布的代码及镜像自动打上版本号并书写 ChangeLog
           - 部署到 prod 服务器（生产环境）
