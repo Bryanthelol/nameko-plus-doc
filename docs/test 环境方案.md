@@ -28,6 +28,7 @@ hide:
       1. git push origin feature/feature-a
 
 4. feature/feature-a 分支 push 到远程仓库后
+
       - 此时 CI 收到 feature/feature-a 分支的 push 事件
 
           1. 跑单元测试（如果有的话）
