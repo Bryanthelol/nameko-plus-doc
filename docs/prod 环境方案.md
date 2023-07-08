@@ -28,7 +28,7 @@ hide:
 
 备注：
 
-- main 分支禁止 Push
+- main 分支禁止主动 Push
 - 合代码通过 Pull Request
 
 ## drone yaml 配置示例
