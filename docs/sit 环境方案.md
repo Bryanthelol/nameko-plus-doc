@@ -36,6 +36,7 @@ hide:
 - develop_host
 - develop_ssh_key
 - gitea_token
+- gitea_base_url
 - sonar_host
 - sonar_token
 
@@ -92,7 +93,8 @@ steps:
   settings:
     gitea_token:
       from_secret: gitea_token
-    gitea_base_url: http://gitea.example.com
+    gitea_base_url: 
+      from_secret: gitea_base_url
     comment_title: "部署 sit 环境失败"
     comment: "${DRONE_PULL_REQUEST_TITLE} 部署 sit 环境失败"
   when:
@@ -111,7 +113,8 @@ steps:
   settings:
     gitea_token:
       from_secret: gitea_token
-    gitea_base_url: http://gitea.example.com
+    gitea_base_url:  
+      from_secret: gitea_base_url
     comment_title: "部署 sit 环境成功"
     comment: "${DRONE_PULL_REQUEST_TITLE} 部署 sit 环境成功"
   when:

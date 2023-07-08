@@ -31,6 +31,7 @@ hide:
 - staging_host
 - staging_ssh_key
 - gitea_token
+- gitea_base_url
 
 ```yaml
 
@@ -84,7 +85,8 @@ steps:
   settings:
     gitea_token:
       from_secret: gitea_token
-    gitea_base_url: http://gitea.example.com
+    gitea_base_url:  
+      from_secret: gitea_base_url
     comment_title: "部署预发布环境失败"
     comment: "${DRONE_PULL_REQUEST_TITLE} 部署预发布环境失败"
   when:
@@ -103,7 +105,8 @@ steps:
   settings:
     gitea_token:
       from_secret: gitea_token
-    gitea_base_url: http://gitea.example.com
+    gitea_base_url:  
+      from_secret: gitea_base_url
     comment_title: "部署预发布环境成功"
     comment: "${DRONE_PULL_REQUEST_TITLE} 部署预发布环境成功"
   when:
