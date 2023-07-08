@@ -24,9 +24,13 @@ hide:
       2. git commit -m "feature: hello world feature A"
    
 3. 将代码推送到代码库的对应分支
+
       1. git push origin feature/feature-a
+
 4. feature/feature-a 分支 push 到远程仓库后
+
       - 此时 CI 收到 feature/feature-a 分支的 push 事件
+
           1. 跑单元测试（如果有的话）
           2. 部署到 test 服务器（功能测试）
           3. 跑代码分析（如果有的话）
