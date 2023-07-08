@@ -48,6 +48,14 @@ trigger:
   branch:
     include:
       - main
+  when:
+    event:
+      - pull_request
+    action:
+      include:
+        - opened
+        - reopened
+        - synchronized
 
 clone:
   disable: true
@@ -71,13 +79,5 @@ steps:
       - docker-compose down
       - docker-compose up -d --build --force-recreate
       - docker image prune -f
-  when:
-    event:
-      - pull_request
-    action:
-      include:
-        - opened
-        - reopened
-        - synchronized
 
 ```
