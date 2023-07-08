@@ -5,7 +5,7 @@ nav:
 - index.md
 - 快速开始.md
 - 架构说明.md
-- 持续集成和部署
+- 持续集成和部署:
   - prod 环境方案.md
   - staging 环境方案.md
   - sit 环境方案.md
