@@ -46,3 +46,6 @@ pull request 事件的 action 包含如下：
 - auto_merge_enabled
 - auto_merge_disabled
 
+
+git emoji
+https://github.com/tony-yin/git-emoji

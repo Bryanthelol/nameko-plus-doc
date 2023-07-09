@@ -15,10 +15,9 @@ hide:
 
 1. 功能验证通过，相关人员合并 Pull Request
 
-      - 此时 CI 收到 main 分支的 push  事件（由 merge pull_request 产生）
-
+      - （可选项）此时 CI 收到 main 分支的 push  事件（由 merge pull_request 产生）
           - CI 将做语义化发布，对 main 分支最新 commit 自动打上版本号并书写 ChangeLog
-          - 这个 releas 会推送到远程仓库
+          - 只在代码托管平台是 github 和 gitlab 时可以使用
     
       - 此时 CI 收到 main 分支的 tag 事件
         
@@ -41,35 +40,35 @@ hide:
 
 ```yaml
 
----
+# ---
+# 如果代码托管平台是 github / gitlab 可以使用语义化发布插件
+# kind: pipeline
+# type: docker
+# name: main-merge-pull-request-prod
 
-kind: pipeline
-type: docker
-name: main-merge-pull-request-prod
+# platform:
+#   os: linux
+#   arch: amd64
 
-platform:
-  os: linux
-  arch: amd64
+# trigger:
+#   branch:
+#     include:
+#       - main
+#   event:
+#     include:  
+#       - push
 
-trigger:
-  branch:
-    include:
-      - main
-  event:
-    include:  
-      - push
+# clone:
+#   disable: true
 
-clone:
-  disable: true
-
-steps:
-  - name: semantic-release  
-    image: gtramontina/semantic-release:17.4.3
-    environment:  
-      GITHUB_TOKEN:  
-        from_secret: gitea_token  
-    entrypoint:  
-      - semantic-release
+# steps:
+#   - name: semantic-release  
+#     image: gtramontina/semantic-release:17.4.3
+#     environment:  
+#       GITHUB_TOKEN:  
+#         from_secret: gitea_token  
+#     entrypoint:  
+#       - semantic-release
     
 ---
 
