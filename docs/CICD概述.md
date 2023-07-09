@@ -1,7 +1,7 @@
----
-# hide:
-#   - footer
----
+<!-- ---
+hide:
+  - footer
+--- -->
 
 # CICD概述
 
