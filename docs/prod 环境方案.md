@@ -114,6 +114,6 @@ steps:
     # auto_tag: true
     purge: true
     compress: true
-# TODO 通知 k8s 更新镜像
+# TODO 通知 k8s 更新
 ```
 
