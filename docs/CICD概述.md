@@ -19,8 +19,8 @@
 
 1. 单人单分支手动发布
 2. 团队多分支 GitFlow 工作流
-3. 团队多分支 semantic-release 语义化发布
-4. 通知 Kubernetes 全自动发布
+3. 团队多分支 semantic-release 语义化发布（需要代码托管平台为 github / gitlab）
+4. 通知 Kubernetes 发布
 
 目前采用 gitflow 工作流
 
