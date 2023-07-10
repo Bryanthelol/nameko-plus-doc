@@ -15,15 +15,19 @@ hide:
 
 1. 功能验证通过，相关人员合并 Pull Request
 
-      - （可选项）此时 CI 收到 main 分支的 push  事件（由 merge pull_request 产生）
+      - （可选项 1）此时 CI 收到 main 分支的 push  事件（由 merge pull_request 产生）
+
           - CI 将做语义化发布，对 main 分支最新 commit 自动打上版本号并书写 ChangeLog
           - 只在代码托管平台是 github 和 gitlab 时可以使用
-    
+
+      - （可选项 2）在代码托管平台界面对 main 分支的最新 commit 做 Releas 并打上 tag
+
+2. 在选项 1 或者选项 2 执行后
+      
       - 此时 CI 收到 main 分支的 tag 事件
-        
-          - 构建镜像并推送到镜像仓库
+          -  构建镜像并推送到镜像仓库
           - 部署到 prod 服务器（生产环境）
-            - 通知 k8s 更新镜像
+          - 通知 k8s 更新镜像
 
 备注：
 
