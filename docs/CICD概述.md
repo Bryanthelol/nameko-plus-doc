@@ -24,6 +24,13 @@ hide:
 
 目前采用 gitflow 工作流
 
+TODO
+- 缺乏一个回滚策略
+  - feature 分支的回滚
+    - 可以 reset ，然后 push -f
+  - develop 和 main 分支
+    - 只能 revert （对应的是 push 事件）
+
 ## 备忘
 
 pull request 事件的 action 包含如下：
