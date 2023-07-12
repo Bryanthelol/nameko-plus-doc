@@ -13,7 +13,8 @@ hide:
 
 - Gitea 代码托管/镜像仓库
 - Drone CI/CD 平台
-- Kubernetes 容器编排系统
+- docker compose （test，sit，staging 环境）
+- Kubernetes 容器编排系统（prod 环境）
 
 ## 策略
 
