@@ -90,9 +90,7 @@ platform:
   arch: amd64
 
 trigger:
-  branch:
-    include:
-      - main
+  # 备注：如果 event 为 tag，则不能写 branch 条件，否则会导致 tag event 失效
   event:
     include:
       - tag
@@ -106,6 +104,7 @@ steps:
   commands:
     - git clone ${DRONE_GIT_HTTP_URL} .
     - git checkout ${DRONE_BRANCH}
+
 - name: build-and-push-image
   image: plugins/docker
   settings:
@@ -120,9 +119,10 @@ steps:
     dockerfile: ./Dockerfile
     tags:
     - ${DRONE_TAG}
-    # auto_tag: true
     purge: true
     compress: true
+
 # TODO 通知 k8s 更新
+
 ```
 

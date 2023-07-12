@@ -61,6 +61,10 @@ trigger:
   branch:
     include:
       - feature/*
+  event:
+    include:
+      - push
+      - custom
 
 clone:
   disable: true
@@ -84,21 +88,13 @@ steps:
       - docker-compose down
       - docker-compose up -d --build --force-recreate
       - docker image prune -f
-  when:
-    event:
-      include:
-        - push
-        - custom
+
 - name: clone
   image: alpine/git
   commands:
     - git clone ${DRONE_GIT_HTTP_URL} .
     - git checkout ${DRONE_BRANCH}
-  when:
-    event:
-      include:
-        - push
-        - custom
+
 - name: code-analysis
   image: aosapps/drone-sonar-plugin
   volumes:
@@ -112,11 +108,6 @@ steps:
     sources: .
     level: DEBUG
     showProfiling: true
-  when:
-    event:
-      include:
-        - push
-        - custom
 
 volumes:
 - name: sonarqube_cache
