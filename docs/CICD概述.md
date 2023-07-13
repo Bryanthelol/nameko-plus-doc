@@ -27,6 +27,7 @@ hide:
 
 TODO
 
+- 缺乏一个 hotfix 分支策略
 - 缺乏一个回滚策略
   
     - feature 分支的回滚
