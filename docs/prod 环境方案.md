@@ -7,11 +7,11 @@ hide:
 
 ## 流程
 
-前置条件
+### 前置条件
 
 - 测试人员在预发布环境下再次验证功能，团队做上线前的其他准备工作
 
-主流程
+### 主流程
 
 1. 功能验证通过，相关人员合并 Pull Request
 
@@ -34,18 +34,20 @@ hide:
           		- 把拉取下来的镜像运行成容器
               - 通知 k8s 更新
 
-备注：
+### 备注
 
 - main 分支禁止主动 Push
 - 合代码通过 Pull Request
 
 ## drone yaml 配置示例
 
-需要准备的 secret：
+### 需要准备的 secret
 
 - staging_host
 - staging_ssh_key
 - gitea_token
+
+### 配置代码
 
 ```yaml
 

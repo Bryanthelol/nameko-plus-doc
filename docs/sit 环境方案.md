@@ -8,11 +8,11 @@ hide:
 
 ## 流程
 
-前置条件
+### 前置条件
 
 - feature/feature-a 分支的功能在 test 环境通过验收后
 
-主流程
+### 主流程
 
 1. 相关人员发起 Pull Request 到 develop 分支
 2. 由相关人员进行 Code Review 
@@ -24,20 +24,22 @@ hide:
           - 部署到 sit 服务器（集成测试）
           - 跑代码扫描（如果有的话）
 
-备注：
+### 备注
 
 - develop 分支禁止主动 Push
 - 合代码通过 Pull Request
 
 ## drone yaml 配置示例
 
-需要准备的 secret：
+### 需要准备的 secret
 
 - develop_host
 - develop_ssh_key
 - gitea_token
 - sonar_host
 - sonar_token
+
+### 配置代码
 
 ```yaml
 

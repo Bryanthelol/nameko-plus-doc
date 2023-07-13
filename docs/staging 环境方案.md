@@ -7,11 +7,11 @@ hide:
 
 ## 流程
 
-前置条件
+### 前置条件
 
 - develop 分支的功能在 sit 环境通过验收后
 
-主流程
+### 主流程
 
 1. 相关人员发起 Pull Request 到 main 分支
 
@@ -19,18 +19,20 @@ hide:
           - 跑单元测试（如果有的话）
           - 部署到 staging 服务器（预发布环境）
 
-备注：
+### 备注
 
 - main 分支禁止主动 Push
 - 合代码通过 Pull Request
 
 ## drone yaml 配置示例
 
-需要准备的 secret：
+### 需要准备的 secret
 
 - staging_host
 - staging_ssh_key
 - gitea_token
+
+### 配置代码
 
 ```yaml
 

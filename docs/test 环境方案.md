@@ -7,12 +7,12 @@ hide:
 
 ## 流程
 
-前置条件
+### 前置条件
 
 - git clone 项目到本地
 - git checkout main
 
-主流程
+### 主流程
 
 1. 从 main 创建一个分支来完成新功能的开发 
    
@@ -38,12 +38,14 @@ hide:
 
 ## drone yaml 配置示例
 
-需要准备的 secret：
+### 需要准备的 secret
 
 - test_host
 - test_ssh_key
 - sonar_host
 - sonar_token
+
+### 配置代码
 
 ```yaml
 
