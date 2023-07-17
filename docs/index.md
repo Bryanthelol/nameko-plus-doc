@@ -34,5 +34,3 @@ Nameko 提供 RPC 同步调用（同时支持异步调用），事件发布/订�
 
         - https://itnext.io/grpc-apis-with-nameko-11bbd9492225
 
-- apiflask
-    	- https://apiflask.com/
