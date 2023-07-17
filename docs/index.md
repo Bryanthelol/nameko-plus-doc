@@ -24,7 +24,7 @@ Nameko 提供 RPC 同步调用（同时支持异步调用），事件发布/订�
 
 ## 参考文档
 
-- nameko
+- nameko 文档
   
     - https://nameko.readthedocs.io/en/v3.0.0-rc/
     - https://agitated-hoover-1d4d78.netlify.app/
@@ -34,3 +34,10 @@ Nameko 提供 RPC 同步调用（同时支持异步调用），事件发布/订�
 
         - https://itnext.io/grpc-apis-with-nameko-11bbd9492225
 
+- nameko 论坛
+  
+    - https://discourse.nameko.io/
+
+- nameko 聊天室
+
+    - https://app.gitter.im/index.html#/room/#nameko_Lobby:gitter.im
