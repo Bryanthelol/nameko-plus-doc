@@ -5,7 +5,7 @@ nav:
 - index.md
 - 快速开始.md
 - 项目文件结构.md
-- 架构说明.md
+- 整体架构说明.md
 - 持续集成和部署:
   - CICD概述.md
   - test 环境方案.md
