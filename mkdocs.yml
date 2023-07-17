@@ -13,7 +13,9 @@ nav:
   - sit 环境方案.md
   - staging 环境方案.md
   - prod 环境方案.md
-- 依赖项.md
+- 依赖项记录.md
+- Nameko 源码解读:
+  - 源码概述.md
 repo_url: https://gitea.bearcatlog.com/BryantStudio
 repo_name: BryantStudio
 copyright: Copyright &copy; 2023 Bryant He
