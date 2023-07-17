@@ -4,6 +4,7 @@ site_name: Nameko-plus
 nav:
 - index.md
 - 快速开始.md
+- 项目文件结构.md
 - 架构说明.md
 - 持续集成和部署:
   - CICD概述.md
