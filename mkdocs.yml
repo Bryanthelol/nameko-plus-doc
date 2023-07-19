@@ -6,17 +6,19 @@ nav:
 - 快速开始.md
 - 项目文件结构.md
 - 整体架构说明.md
-- 高可用设计.md
 - 单元测试设计.md
-- 编写 Nameko 扩展.md
 - 持续集成和部署:
   - CICD概述.md
   - test 环境方案.md
   - sit 环境方案.md
   - staging 环境方案.md
   - prod 环境方案.md
-- Nameko 源码解读:
-  - 源码概述.md
+- 深入微服务架构:
+  - 高可用设计.md
+  - 事务.md
+- 深入 Nameko 内部:
+  - 编写 Nameko 扩展.md
+  - Nameko 源码解读.md
 repo_url: https://gitea.bearcatlog.com/BryantStudio
 repo_name: BryantStudio
 copyright: Copyright &copy; 2023 Bryant He
