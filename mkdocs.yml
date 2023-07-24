@@ -50,12 +50,12 @@ theme:
         name: 切至光亮模式
 extra:
   alternate:
-    - name: 简体中文
-      link: https://doc.bearcatlog.com/
-      lang: zh
     - name: English
       link: https://legendary-sopapillas-e2626d.netlify.app/
       lang: en
+    - name: 简体中文
+      link: https://doc.bearcatlog.com/
+      lang: zh
   social:
     - icon: material/github
       link: https://github.com/Bryanthelol
