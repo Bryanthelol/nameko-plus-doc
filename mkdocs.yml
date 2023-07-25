@@ -27,7 +27,7 @@ copyright: Copyright &copy; 2023 Bryant He
 theme:
   name: material
   language: zh
-  logo: ./assets/IMG_0976_little.png
+  logo: assets/IMG_0976_little.png
   icon:
     logo: simple/materialdesign
     repo: simple/github
