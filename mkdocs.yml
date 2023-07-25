@@ -7,14 +7,14 @@ nav:
 - 测试驱动开发.md
 - 服务可观测:
   - 度量服务状态.md
-# - 项目文件结构.md
-# - 整体架构说明.md
 - 持续集成和部署:
   - CICD 概述.md
   - test 环境方案.md
   - sit 环境方案.md
   - staging 环境方案.md
   - prod 环境方案.md
+# - 项目文件结构.md
+# - 整体架构说明.md
 # - 深入 Nameko 内部:
 #   - 编写 Nameko 扩展.md
 #   - Nameko 源码解读.md
