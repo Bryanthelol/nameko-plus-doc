@@ -28,6 +28,7 @@ theme:
   name: material
   language: zh
   logo: assets/IMG_0976_little.png
+  favicon: assets/IMG_0976_little.png
   icon:
     logo: simple/materialdesign
     repo: simple/github
