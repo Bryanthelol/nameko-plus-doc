@@ -5,10 +5,6 @@ nav:
 - index.md
 - 快速开始.md
 - 测试驱动开发.md
-- 服务工程化:
-  - 生成项目.md
-  - 日志记录.md
-  - 动态配置.md
 - 服务可观测:
   - 度量服务状态.md
 - 持续集成和部署:
@@ -17,13 +13,13 @@ nav:
   - sit 环境方案.md
   - staging 环境方案.md
   - prod 环境方案.md
-# - 整体架构说明.md
+- 整体架构说明.md
+- 深入微服务架构:
+  - 基于 Nameko 的高可用设计.md
+  - 基于 Nameko 的分布式事务.md
 # - 深入 Nameko 内部:
 #   - 编写 Nameko 扩展.md
 #   - Nameko 源码解读.md
-# - 深入微服务架构:
-#   - 基于 Nameko 的高可用设计.md
-#   - 基于 Nameko 的分布式事务.md
 repo_url: https://github.com/Bryanthelol/namekoplus
 repo_name: namekoplus
 copyright: Copyright &copy; 2023 Bryant He
