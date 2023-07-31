@@ -13,7 +13,10 @@ nav:
   - sit 环境方案.md
   - staging 环境方案.md
   - prod 环境方案.md
-# - 项目文件结构.md
+- 项目工程化:
+  - 生成项目.md
+  - 日志记录.md
+  - 动态配置.md
 # - 整体架构说明.md
 # - 深入 Nameko 内部:
 #   - 编写 Nameko 扩展.md
