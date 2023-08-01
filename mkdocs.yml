@@ -13,10 +13,10 @@ nav:
   - sit 环境方案.md
   - staging 环境方案.md
   - prod 环境方案.md
-- 整体架构说明.md
-- 深入微服务架构:
-  - 基于 Nameko 的高可用设计.md
-  - 基于 Nameko 的分布式事务.md
+# - 整体架构说明.md
+# - 深入微服务架构:
+#   - 基于 Nameko 的高可用设计.md
+#   - 基于 Nameko 的分布式事务.md
 # - 深入 Nameko 内部:
 #   - 编写 Nameko 扩展.md
 #   - Nameko 源码解读.md
