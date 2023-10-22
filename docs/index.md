@@ -24,24 +24,3 @@ Nameko 提供 RPC 同步调用（同时支持异步调用），事件发布/订�
 这份文档接下来的内容会进一步说明：
 
 **如何基于 Nameko 开发分布式微服务应用。**
-
-
-## 参考文档
-
-- nameko 文档
-  
-    - https://nameko.readthedocs.io/en/v3.0.0-rc/
-    - https://agitated-hoover-1d4d78.netlify.app/
-    - https://hackernoon.com/building-microservices-with-nameko-part1-ud1135ug
-    - https://morioh.com/p/64fd8227f38d
-    - grpc
-
-        - https://itnext.io/grpc-apis-with-nameko-11bbd9492225
-
-- nameko 论坛
-  
-    - https://discourse.nameko.io/
-
-- nameko 聊天室
-
-    - https://app.gitter.im/index.html#/room/#nameko_Lobby:gitter.im
